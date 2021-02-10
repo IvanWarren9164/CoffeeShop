@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Models.CoffeeShop
 {
-    public class RegisterViewModel
+    public class StartViewModel
     {
 
         public string FirstName { get; set; }

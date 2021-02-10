@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model CoffeeShop.ViewModels.CoffeeShop.ShopViewModel
+
+
+<ul class="list-group">
+    @foreach (var item in Model.Items)
+    {
+    <li class="list-group-item">
+        <p>Name: @item.Name</p>
+        <p>Description: @item.Description</p>
+        <p>Quantity: @item.Quantity</p>
+        <p>Price: @item.Price</p>
+        <a asp-controller="CoffeeShop" asp-action="PurchaseItem" asp-route-id="item.ID">BUY</a>
+    </li>
+    }
+</ul>

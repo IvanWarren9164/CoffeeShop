@@ -5,16 +5,12 @@
 }
 
 
-@model CoffeeShop.Models.CoffeeShop.RegisterViewModel
+@model CoffeeShop.DomainModels.UserViewModel
 
+<form asp-controller="CoffeeShop" asp-action="MakeNewUser" method="post">
 
-<form asp-controller="CoffeeShop" asp-action="DisplayInfo" method="post">
-
-    <label>First Name: </label>
-    <input asp-for="FirstName" /> <br />
-
-    <label>Last Name: </label>
-    <input asp-for="LastName" /> <br />
+    <label>Username: </label>
+    <input asp-for="Username" /> <br />
 
     <label>Email: </label>
     <input asp-for="Email" /> <br />
@@ -23,7 +19,7 @@
     <input asp-for="PhoneNumber" /> <br />
 
     <label>Password: </label>
-    <input asp-for="Password" /> <br />
+    <input type="password" asp-for="Password" /> <br />
 
     <button>Register</button>
 
